@@ -1,0 +1,36 @@
+l<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine Proposal ❤️</title>
+    <style>
+        body { text-align: center; font-family: Arial, sans-serif; background-color: pink; }
+        .container { margin-top: 100px; }
+        h1 { color: red; }
+        .btn { padding: 10px 20px; font-size: 18px; border: none; cursor: pointer; margin: 10px; border-radius: 10px; }
+        .yes { background-color: green; color: white; }
+        .no { background-color: red; color: white; position: absolute; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Kya tum meri Valentine banogi? ❤️</h1>
+        <button class="btn yes" onclick="yesClicked()">Haan! 😍</button>
+        <button class="btn no" onmouseover="moveButton()">Nahi 😝</button>
+    </div>
+
+    <script>
+        function yesClicked() {
+            alert("Yay! Mujhe pata tha tum haan kahogi! 💖");
+        }
+
+        function moveButton() {
+            let x = Math.random() * window.innerWidth - 100;
+            let y = Math.random() * window.innerHeight - 50;
+            document.querySelector(".no").style.left = x + "px";
+            document.querySelector(".no").style.top = y + "px";
+        }
+    </script>
+</body>
+</html>
